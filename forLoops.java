@@ -1,3 +1,56 @@
+//Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
+//Each unique element appears only once. The relative order of the elements should be kept the same.
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+
+        //square each element
+        //sort elements in non-decreasing order
+        //non-dcreasing order == increasing order
+
+        int n = nums.length;
+        int[] result = new int[n];
+        int left = 0;
+        int right = n-1;
+
+        for(int i = n-1; i >= 0; i--){
+            int square;
+            if(Math.abs(nums[left]) < Math.abs(nums[right])){
+                square = nums[right];
+                right--;
+            }else{
+                square = nums[left];
+                left++;
+            }
+            result[i] = square * square;
+        }
+        return result;
+    }
+}
+
+
+//Given a binary array nums, return the maximum number of consecutive 1's in the array.
+
+class Solution{
+    public int findMaxConsecutiveOnes(int[] nums){
+
+        int count = 0;
+        int maxCount = 0;
+
+        for(int i =0; i < nums.length; i++) {
+            if (nums[i] == 1){
+                count++;
+            }else{
+                maxCount = Math.max(maxCount, count);
+                count = 0;
+            }
+        }
+
+        return Math.max(maxCount, count);
+    }
+
+}
+
+
 //Declaring an integer array of 10 elements
 int[] int_array = new int[10];
 
@@ -80,3 +133,8 @@ class Solution {
 
     }
 }
+
+
+//Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
+//such that each unique element appears only once. The relative order of the elements should be kept the same.
+
