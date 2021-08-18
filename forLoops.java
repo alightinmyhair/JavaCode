@@ -1,8 +1,3 @@
-//Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
-//Each unique element appears only once. The relative order of the elements should be kept the same.
-
-
-
 class Solution {
     public int[] sortedSquares(int[] nums) {
 
@@ -138,6 +133,49 @@ class Solution {
 }
 
 
-//Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
+//PROBLEM:Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
 //such that each unique element appears only once. The relative order of the elements should be kept the same.
 
+
+//SOLUTION:The problem below shows a two pointer approach.
+//There are two variables: one set to 0 and one set to 1, aka the latter
+//being ahead of the 1st index in an array
+//Then, looping through the array and using the 2 variables to compare the 
+//elements in the array, duplicates can be caught
+class Solution {
+    public int removeDuplicates(int[] nums){
+        if(num.length == 0){
+            return 0;
+        }
+
+        int i = 0;
+
+        for(int j = 1; j < nums.length; j++){
+            if(nums[j] != nums[i]){
+                i++;
+                nums[i] = nums[j];
+            }
+        }
+        return i + 1;
+    }
+}
+
+//function below (and algorithm)
+public static boolean linearSearch(int[] array, int length, int element){
+
+
+    //check for edge cases: is the array null or empty?
+    if(array == null || length == 0) {
+        return false;
+    }
+
+    //carry out the linear search by checking each element, starting from the first one
+    for(int i =0; i< length; i_++) {
+        //found the element
+        if(array[i] == element) {
+            return true;
+        }
+    }
+    //didn't find element
+    return false;
+}
