@@ -1,11 +1,14 @@
 //Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place 
 //Each unique element appears only once. The relative order of the elements should be kept the same.
+
+
+
 class Solution {
     public int[] sortedSquares(int[] nums) {
 
         //square each element
         //sort elements in non-decreasing order
-        //non-dcreasing order == increasing order
+        //non-decreasing order == increasing order
 
         int n = nums.length;
         int[] result = new int[n];
