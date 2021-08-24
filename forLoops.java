@@ -161,6 +161,7 @@ class Solution {
 }
 
 //function below (and algorithm)
+//to search for items in an array
 public static boolean linearSearch(int[] array, int length, int element){
 
 
@@ -178,4 +179,21 @@ public static boolean linearSearch(int[] array, int length, int element){
     }
     //didn't find element
     return false;
+}
+
+//PROBLEM:
+//Given an array or integers, check if there exists two integers N & M such that N is the double of M (i.e. N=2*M)
+
+class Solution {
+    public boolean checkIfExist(int[] arr) {
+
+        Set<Integer> set = new HashSet<>();
+
+        for(int i = 0; i < arr.length; i++){
+            if(set.contains(arr[i]*2) || (arr[i]%2 == 0 && set.contains(arr[i]/2)))
+                return true;
+            set.add(arr[i]);
+        }
+        return false;
+    }
 }
