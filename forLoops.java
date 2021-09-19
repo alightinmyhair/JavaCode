@@ -1,5 +1,5 @@
 class Solution {
-    public int[] sortedSquares(int[] nums) {
+    public int sortedSquares(int[] nums) {
 
         //square each element
         //sort elements in non-decreasing order
@@ -26,7 +26,7 @@ class Solution {
 }
 
 
-//Given a binary array nums, return the maximum number of consecutive 1's in the array.
+//Given a binary array nums, return the maximum number of consecutive 1's in the array
 
 class Solution{
     public int findMaxConsecutiveOnes(int[] nums){
